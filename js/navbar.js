@@ -43,12 +43,6 @@ function loginSystem(e){
 // ------------ CLOSING SESSION. ------------ //
 let closingSessionBtn = document.getElementById("closeSession__btn");
 closingSessionBtn.onclick = () => {
-  /* Swal.fire({
-    title: '¿Salir de MaxNutrition?',
-    text: 'Estás abandonando la sesión, ¿estás seguro?',
-    icon: 'warning',
-    confirmButtonText: 'Cool'
-  }) */
   Swal.fire({
     title: '¿Salir de MaxNutrition?',
     text: "Estás abandonando la sesión, ¿estás seguro?",
