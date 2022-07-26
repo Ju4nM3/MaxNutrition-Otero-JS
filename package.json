@@ -1,0 +1,24 @@
+{
+  "name": "proyecto-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch scss/style.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ju4nM3/maxNutrition-Otero.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ju4nM3/maxNutrition-Otero/issues"
+  },
+  "homepage": "https://github.com/Ju4nM3/maxNutrition-Otero#readme",
+  "dependencies": {
+    "chart.js": "^3.8.2",
+    "sweetalert2": "^11.4.24"
+  }
+}

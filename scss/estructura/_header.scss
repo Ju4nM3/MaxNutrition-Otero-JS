@@ -1,0 +1,31 @@
+header {
+  position: relative;
+  grid-area: header;
+
+  display: grid;
+  grid-template-rows: 120px;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-areas: "boton" "logo" "empty";
+
+  justify-content: center;
+  align-items: center;
+
+  .header__title {
+    display: flex;
+    justify-content: center;
+    h1 {
+      grid-area: logo;
+
+      text-align: center;
+      font-size: 1.8rem;
+
+      span {
+        color: $main-color;
+      }
+    }
+  }
+
+  .header__empty {
+    grid-area: empty;
+  }
+}

@@ -1,0 +1,65 @@
+.hero__metabolism-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    h2 {
+      text-align: center;
+
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      color: $main-color;
+      font-weight: 600;
+    }
+
+    .hero__metabolism-date{
+      padding: 15px 0px;
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        width: 78%;
+
+        select {
+            @include input;
+            outline: 2px solid $main-color;
+        }
+        
+        input {
+            @include input;
+            outline: 2px solid $main-color;
+        }
+        button {
+            @include button;
+            background-color: $main-color;
+            transition: 0.24s;
+            &:hover {
+              background-color: $fourth-color;
+            }
+            span {
+              color: $menu-main-color;
+              font-size: 1rem;
+            }
+          }
+    }
+
+    .hero__metabolism-messageContainer {
+      margin-top: 12px;
+      width: 78%;
+      .hero__metabolism-message{
+        font-size: 0.8rem;
+        color: $main-color;
+      }
+    }
+    .hero__metabolism-canvas {
+      width: 400px;
+      height: 400px;
+    }
+    
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MaxNutrition</title>
+
+    <!-- NORMALIZE -->
+    <link rel="stylesheet" href="../css/normalize.css" />
+
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- MY FONTS -->
+    <!-- OPEN SANS -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/99c4b4ae31.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div></div>
+      <div class="header__title">
+        <a href="../index.html"><h1 class="header__title-h1"><span>Max</span><br />NutritioN</h1></a>
+      </div>
+      <div class="header__empty"></div>
+    </header>
+
+    <!-- HAMBURGER BUTTON -->
+    <button class="hambBtn" id="hambNavBtn">
+      <div class="hambBtn-Bar"></div>
+      <div class="hambBtn-Bar"></div>
+      <div class="hambBtn-Bar"></div>
+    </button>
+
+    <!-- NAVBAR -->  
+    <nav class="navbar">
+
+      <!-- Navbar Title -->
+      <div class="navbar__title"><a href="../index.html"><span>Max<br /><span>NutritioN</span></span></a></div>
+
+      <!-- Navbar Pre-Login -->
+      <div class="navbar__loginContainer" id="login-system">
+        <form class="navbar__loginForm" id="login__form" action="#" >
+          <input type="text" name="user" id="current-user" placeholder="Nombre de Usuario / Email" />
+          <input type="password" name="password" id="current-password" placeholder="Contraseña" />
+          <button type="submit" id="login__btn"><span>Iniciar sesión</span></button>
+        </form>
+        <a class="navbar__recoverPassword" href="#">¿Olvidaste tu contraseña?</a>
+        <a class="navbar__register-btnContainer" href="register.html">
+          <button class="navbar__register-btn" id="register__btn">
+            <span>Crear cuenta nueva</span>
+          </button>
+        </a>  
+      </div>
+
+      <!-- Navbar Post-Login -->
+      <div class="navbar__postLoginContainer" id="post-login">
+        <div class="navbar__postLogin-userContainer">
+          <div class="navbar__postLogin-user">
+            <i class="fa-solid fa-circle-user fa-xl"></i>
+            <span>Nombre de usuario</span>
+          </div>
+          <button type="submit" id="login__btn" class="navbar__postlogin-btn"><span>Cerrar sesión</span></button>
+        </div>
+        <ul>
+          <a href="../index.html">
+            <li>
+              <i class="fa-solid fa-house-fire fa-lg"></i>
+              <span>Inicio</span>
+            </li>
+            
+          </a>
+          <a href="metabolism.html">
+            
+            <li>
+              <i class="fa-solid fa-calculator fa-lg"></i>
+              <span>Calculadora de TMB</span>
+            </li>
+            
+          </a>
+          <a href="macro.html">
+            <li>
+              <i class="fa-solid fa-prescription-bottle fa-lg"></i>
+              <span>Calculadora de macronutrientes</span>
+            </li>
+          </a>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="hero__metabolism-main">
+      <h2>calculadora de TMB</h2>
+      <form action="" id="tmb-form">
+        <select name="">
+            <option value="default" selected hidden disabled>Sexo</option>
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+        </select>
+        <input type="number" placeholder="Edad">
+        <input type="number" placeholder="Peso (Kg)">
+        <input type="number" placeholder="Altura (cm)">
+        <select name="">
+            <option value="default" selected hidden disabled>Nivel de Actividad</option>
+            <option value="1">Poco o Nada</option>
+            <option value="2">Ligero</option>
+            <option value="3">Moderado</option>
+            <option value="4">Intenso</option>
+            <option value="5">Muy Intenso</option>
+        </select>
+        <button type="submit"><span>Calcular</span></button>
+      </form>
+      <div class="hero__metabolism-messageContainer" id="message_container"></div>
+      <form action="#" id="form-newAccount"></form>
+    </main>
+
+    <!-- FOOTER -->
+    <footer></footer>
+
+    <!-- JS Register -->
+    <script src="../js/register.js"></script>
+
+    <!-- JS Luxon -->
+    <script src="../js/luxon.min.js"></script>
+
+    <!-- JS Metabolism -->
+    <script src="../js/tmb.js"></script>
+
+    <!-- JS Chart -->
+    <script src="../node_modules/chart.js/dist/chart.js"></script>
+
+    <!-- JS Navbar On/Off -->
+    <script src="../js/navbar.js"></script>   
+
+    <!-- MY JS -->
+    <script src="../js/main.js"></script>
+
+  </body>
+</html>

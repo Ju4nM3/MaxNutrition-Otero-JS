@@ -1,0 +1,483 @@
+* {
+  font-family: "Open Sans", sans-serif;
+}
+* li {
+  list-style-type: none;
+}
+* a {
+  text-decoration: none;
+}
+* a:link {
+  color: #000;
+}
+* a:visited {
+  color: #000;
+}
+
+/* BODY */
+body {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 120px 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+  min-height: 100vh;
+  flex-wrap: wrap;
+  background: #adb5bd;
+}
+
+/* ESTRUCTURA */
+/*HEADER*/
+header {
+  position: relative;
+  grid-area: header;
+  display: grid;
+  grid-template-rows: 120px;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-areas: "boton" "logo" "empty";
+  justify-content: center;
+  align-items: center;
+}
+header .header__title {
+  display: flex;
+  justify-content: center;
+}
+header .header__title h1 {
+  grid-area: logo;
+  text-align: center;
+  font-size: 1.8rem;
+}
+header .header__title h1 span {
+  color: #5d4399;
+}
+header .header__empty {
+  grid-area: empty;
+}
+
+/* NAVBAR */
+/* NAVBAR BUTTON */
+.hambBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: absolute;
+  z-index: 10001;
+  top: 50px;
+  right: 35px;
+  width: 33px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+}
+.hambBtn:focus {
+  outline: none;
+}
+
+.hambBtn-Bar {
+  width: 100%;
+  height: 3px;
+  background-color: #5d4399;
+}
+.hambBtn-Bar:first-child {
+  transition: 0.63s;
+}
+.hambBtn-Bar:nth-child(2) {
+  transition: 0.63s;
+}
+.hambBtn-Bar:last-child {
+  transition: 0s;
+}
+
+.activeHambBtnBars {
+  background-color: #fff;
+}
+.activeHambBtnBars:first-child {
+  transform: rotateZ(-40deg) translate(-6px, 6px);
+}
+.activeHambBtnBars:nth-child(2) {
+  transform: rotateZ(40deg);
+}
+.activeHambBtnBars:last-child {
+  transform: rotateX(90deg);
+}
+
+/* NAVBAR MENU */
+.navbar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  left: 100%;
+  z-index: 1050;
+  width: 100%;
+  height: 100vh;
+  background-color: #5d4399;
+  transition: 0.69s;
+}
+.navbar .navbar__title {
+  margin-top: 35px;
+  text-align: center;
+}
+.navbar .navbar__title span {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #fff;
+}
+.navbar .navbar__title span span {
+  color: #000;
+}
+.navbar .navbar__loginContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 50px;
+  width: 80%;
+}
+.navbar .navbar__loginContainer .navbar__loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+.navbar .navbar__loginContainer .navbar__loginForm input {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  transition: focus 0.12s;
+  padding-left: 7.5px;
+  outline: 2px solid #adb5bd;
+}
+.navbar .navbar__loginContainer .navbar__loginForm input:focus {
+  border: none;
+  outline: 2px solid #36a78e;
+}
+.navbar .navbar__loginContainer .navbar__loginForm input::placeholder {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.navbar .navbar__loginContainer .navbar__loginForm button {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: #b933a5;
+  transition: 0.24s;
+}
+.navbar .navbar__loginContainer .navbar__loginForm button:hover {
+  background-color: #9d4edd;
+  cursor: pointer;
+}
+.navbar .navbar__loginContainer .navbar__loginForm button span {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.navbar .navbar__loginContainer .navbar__recoverPassword {
+  text-decoration: none;
+  text-decoration: underline;
+}
+.navbar .navbar__loginContainer .navbar__recoverPassword:link {
+  color: #4895ef;
+}
+.navbar .navbar__loginContainer .navbar__recoverPassword:link:hover {
+  text-decoration: underline;
+}
+.navbar .navbar__loginContainer .navbar__recoverPassword:visited {
+  text-decoration: none;
+  text-decoration: underline;
+  color: #4895ef;
+}
+.navbar .navbar__loginContainer .navbar__register-btnContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 35px;
+  text-decoration: none;
+}
+.navbar .navbar__loginContainer .navbar__register-btnContainer .navbar__register-btn {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #4895ef;
+  transition: 0.24s;
+}
+.navbar .navbar__loginContainer .navbar__register-btnContainer .navbar__register-btn:hover {
+  background-color: #9d4edd;
+  cursor: pointer;
+}
+.navbar .navbar__loginContainer .navbar__register-btnContainer .navbar__register-btn span {
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.navbar .navbar__loginContainer-off {
+  display: none;
+}
+.navbar .navbar__postLoginContainer {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+}
+.navbar .navbar__postLoginContainer .navbar__postLogin-userContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: fit-content;
+  margin-top: 50px;
+}
+.navbar .navbar__postLoginContainer .navbar__postLogin-userContainer .navbar__postLogin-user {
+  display: grid;
+  row-gap: 12px;
+  align-items: center;
+  grid-template-areas: "icon user" ". closeSeason";
+  padding-left: 30px;
+}
+.navbar .navbar__postLoginContainer .navbar__postLogin-userContainer .navbar__postLogin-user i {
+  grid-area: icon;
+  height: max-content;
+  color: #fff;
+}
+.navbar .navbar__postLoginContainer .navbar__postLogin-userContainer .navbar__postLogin-user span {
+  grid-area: user;
+  margin-left: 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+}
+.navbar .navbar__postLoginContainer .navbar__postLogin-userContainer .navbar__postLogin-user button {
+  grid-area: closeSeason;
+  background-color: transparent;
+  border: none;
+  width: fit-content;
+}
+.navbar .navbar__postLoginContainer .navbar__postLogin-userContainer .navbar__postLogin-user button span {
+  text-decoration: underline;
+  color: #4895ef;
+}
+.navbar .navbar__postLoginContainer .navbar__postLogin-userContainer .navbar__postLogin-user button span:hover {
+  cursor: pointer;
+}
+.navbar .navbar__postLoginContainer .navbar__postLogin-userContainer .navbar__postLogin-user button span:active {
+  color: #000;
+}
+.navbar .navbar__postLoginContainer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-top: 55px;
+}
+.navbar .navbar__postLoginContainer ul li {
+  padding-left: 30px;
+  color: #fff;
+  font-weight: bold;
+}
+.navbar .navbar__postLoginContainer ul li i {
+  width: 15px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.navbar .navbar__postLoginContainer ul li span {
+  color: #fff;
+  padding-left: 25px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.navbar .navbar__postLoginContainer-on {
+  display: flex;
+}
+
+.navbar.activeNavbar {
+  left: 0;
+  z-index: 1050;
+}
+
+.error {
+  outline: 2px solid rgb(182, 29, 29);
+}
+
+/*MAIN*/
+.hero__index-main {
+  position: relative;
+  grid-area: main;
+}
+.hero__index-main .hero__index-firstSection {
+  display: flex;
+  justify-content: center;
+}
+.hero__index-main .hero__index-firstSection p {
+  margin-top: 25px;
+  width: 80%;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.19rem;
+  color: #5d4399;
+}
+.hero__index-main .hero__index-secondSection {
+  display: flex;
+  justify-content: center;
+}
+.hero__index-main .hero__index-secondSection .hero__index-imgContainer {
+  margin-top: 50px;
+  width: 90%;
+  border-radius: 50px;
+}
+.hero__index-main .hero__index-secondSection .hero__index-imgContainer img {
+  border-radius: 5px;
+}
+
+.hero__register-main {
+  display: flex;
+  justify-content: center;
+}
+.hero__register-main form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 78%;
+}
+.hero__register-main form input {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  transition: focus 0.12s;
+  padding-left: 7.5px;
+  outline: 2px solid #5d4399;
+}
+.hero__register-main form input:focus {
+  border: none;
+  outline: 2px solid #36a78e;
+}
+.hero__register-main form input::placeholder {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.hero__register-main form button {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: #5d4399;
+  transition: 0.24s;
+}
+.hero__register-main form button:hover {
+  cursor: pointer;
+}
+.hero__register-main form button span {
+  font-weight: bold;
+}
+.hero__register-main form button:hover {
+  background-color: #9d4edd;
+}
+.hero__register-main form button span {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.hero__metabolism-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.hero__metabolism-main h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #5d4399;
+  font-weight: 600;
+}
+.hero__metabolism-main .hero__metabolism-date {
+  padding: 15px 0px;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.hero__metabolism-main form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 78%;
+}
+.hero__metabolism-main form select {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  transition: focus 0.12s;
+  padding-left: 7.5px;
+  outline: 2px solid #5d4399;
+}
+.hero__metabolism-main form select:focus {
+  border: none;
+  outline: 2px solid #36a78e;
+}
+.hero__metabolism-main form select::placeholder {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.hero__metabolism-main form input {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  transition: focus 0.12s;
+  padding-left: 7.5px;
+  outline: 2px solid #5d4399;
+}
+.hero__metabolism-main form input:focus {
+  border: none;
+  outline: 2px solid #36a78e;
+}
+.hero__metabolism-main form input::placeholder {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.hero__metabolism-main form button {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: #5d4399;
+  transition: 0.24s;
+}
+.hero__metabolism-main form button:hover {
+  cursor: pointer;
+}
+.hero__metabolism-main form button span {
+  font-weight: bold;
+}
+.hero__metabolism-main form button:hover {
+  background-color: #9d4edd;
+}
+.hero__metabolism-main form button span {
+  color: #fff;
+  font-size: 1rem;
+}
+.hero__metabolism-main .hero__metabolism-messageContainer {
+  margin-top: 12px;
+  width: 78%;
+}
+.hero__metabolism-main .hero__metabolism-messageContainer .hero__metabolism-message {
+  font-size: 0.8rem;
+  color: #5d4399;
+}
+.hero__metabolism-main .hero__metabolism-canvas {
+  width: 400px;
+  height: 400px;
+}
+
+/* FOOTER */
+footer {
+  position: relative;
+  grid-area: footer;
+}
+
+/*# sourceMappingURL=style.css.map */
