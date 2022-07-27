@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 5px;
 
   h2 {
     text-align: center;
@@ -54,8 +54,33 @@
       color: $main-color;
     }
   }
-  .hero__metabolism-canvas {
-    width: 400px;
-    height: 400px;
+  .hero__metabolism-message {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    margin-bottom: 30px;
+    span{
+      text-align: center;
+      &:first-child{
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+      &:nth-child(2) {
+        font-weight: 500;
+        font-size: 1rem;
+        color: $main-color;
+        padding-bottom: 15px;
+      }
+    }
+    .myChart{
+      width: 80vw;
+      height: 40vh;
+      
+    }
+  }
+  .hero__metabolism-message-on {
+    display: flex;
+    
   }
 }
+

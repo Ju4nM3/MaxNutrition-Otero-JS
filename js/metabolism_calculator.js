@@ -1,4 +1,5 @@
-let tmb_form = document.getElementById("tmb-form")
+let tmb_form = document.getElementById("tmb-form");
+let tmb_message = document.getElementById("tmb_message");
 
 function calculoTmb(sexo, ejercicio) {
     switch (ejercicio) {
@@ -45,5 +46,26 @@ function calculator(e){
 
     let metabolismo = calculoTmb(sexo, ejercicio);
     let metabolismo_final = metabolismo(edad, altura, peso);
-    console.log(metabolismo_final)
+    sessionStorage.setItem("metabolismo", metabolismo_final);
+
+    tmb_message.className = 'hero__metabolism-message hero__metabolism-message-on';
+    let tmb_result = document.getElementById("tmb_result");
+    tmb_result.innerHTML = metabolismo_final;
 }
+
+let metabolismUser = parseInt(sessionStorage.getItem("metabolismo"));
+
+let limits = {
+  unhealthy: metabolismUser - 500,
+  deficit: metabolismUser - 200,
+  maintain: metabolismUser + 200,
+  superavit: metabolismUser + 500,
+  excess: metabolismUser * 2,
+}
+
+let {unhealthy, deficit, maintain, superavit, excess} = limits;
+
+let labels = [`Unhealthy (0-${unhealthy})`, `Deficit (${unhealthy}-${deficit})`, `Maintain (${deficit}-${maintain})`, `Superavit (${maintain}-${superavit})`, `Excess (${superavit}-${excess})`];
+let dataArray = [unhealthy, deficit, maintain, superavit, excess];
+
+
