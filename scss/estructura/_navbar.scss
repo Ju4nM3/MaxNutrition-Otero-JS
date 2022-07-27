@@ -3,28 +3,22 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
-
   position: absolute;
   z-index: 10001;
   top: 50px;
   right: 35px;
-
   width: 33px;
   height: 25px;
-
   background-color: transparent;
   border: none;
   &:focus {
     outline: none;
   }
 }
-
 .hambBtn-Bar {
   width: 100%;
   height: 3px;
-
   background-color: $main-color;
-
   &:first-child {
     transition: 0.63s;
   }
@@ -35,10 +29,8 @@
     transition: 0s;
   }
 }
-
 .activeHambBtnBars {
   background-color: $menu-main-color;
-
   &:first-child {
     transform: rotateZ(-40deg) translate(-6px, 6px);
   }
@@ -53,21 +45,16 @@
 /* NAVBAR MENU */
 .navbar {
   position: fixed;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   top: 0;
   left: 100%;
   z-index: 1050;
-
   width: 100%;
   height: 100vh;
-
   background-color: $main-color;
   transition: 0.69s;
-
   .navbar__title {
     margin-top: 35px;
     text-align: center;  
@@ -82,42 +69,33 @@
   }
   .navbar__loginContainer {
     position: relative;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-
     margin-top: 50px;
     width: 80%;
-
     .navbar__loginForm {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 20px;
-
       width: 100%;
-
       input {
         @include input;
         outline: 2px solid $background-font;
       }
-
       button {
         width: 100%;
         height: 35px;
         border: none;
         border-radius: 5px;
-
         background-color: $secondary-color;
         transition: 0.24s;
-
         &:hover {
           background-color: $fourth-color;
           cursor: pointer;
         }
-
         span {
           color: $menu-main-color;
           font-weight: bold;
@@ -128,15 +106,12 @@
     .navbar__recoverPassword {
       text-decoration: none;
       text-decoration: underline;
-
       &:link {
         color: $third-color;
-
         &:hover {
           text-decoration: underline;
         }
       }
-
       &:visited {
         text-decoration: none;
         text-decoration: underline;
@@ -148,24 +123,18 @@
       justify-content: center;
       width: 100%;
       height: 35px;
-
       text-decoration: none;
-
       .navbar__register-btn {
         height: 100%;
         width: 100%;
-
         border: none;
         border-radius: 5px;
-
         background-color: $third-color;
         transition: 0.24s;
-
         &:hover {
           background-color: $fourth-color;
           cursor: pointer;
         }
-
         span {
           color: $menu-main-color;
           font-weight: bold;
@@ -177,74 +146,60 @@
   .navbar__loginContainer-off {
     display: none;
   }
-
   .navbar__postLoginContainer {
     display: none;
     flex-direction: column;
     width: 100%;
-    
     .navbar__postLogin-userContainer {
       display: flex;
       flex-direction: column;
       gap: 5px;
-
       width: fit-content;
       margin-top: 50px;
-
-     .navbar__postLogin-user {
-      display: grid;
-      row-gap: 12px;
-      align-items: center;
-      grid-template-areas:
-      "icon user"
-      ". closeSeason"
-      ;
-
-      padding-left: 30px;
-
-      i {
-        grid-area: icon;
-        height: max-content;
-        color: $menu-main-color;
-      }
-
-      span {
-        grid-area: user;
-        margin-left: 10px;
-        font-size: 1rem;
-        font-weight: 400;
-        color: $menu-main-color;
-      }
-
-      button {
-        grid-area: closeSeason;
-        background-color: transparent;
-        border: none;
-        width: fit-content;
+      .navbar__postLogin-user {
+        display: grid;
+        row-gap: 12px;
+        align-items: center;
+        grid-template-areas:
+        "icon user"
+        ". closeSeason"
+        ;
+        padding-left: 30px;
+        i {
+          grid-area: icon;
+          height: max-content;
+          color: $menu-main-color;
+        }
         span {
-          text-decoration: underline;
-          color: $third-color;
-          &:hover {
-            cursor: pointer;
-          }
-          &:active {
-            color: #000;
+          grid-area: user;
+          margin-left: 10px;
+          font-size: 1rem;
+          font-weight: 400;
+          color: $menu-main-color;
+        }
+        button {
+          grid-area: closeSeason;
+          background-color: transparent;
+          border: none;
+          width: fit-content;
+          span {
+            text-decoration: underline;
+            color: $third-color;
+            &:hover {
+              cursor: pointer;
+            }
+            &:active {
+              color: #000;
+            }
           }
         }
-      }       
+      }  
     }
-      
-      
-    }
-    
-
     ul {
       display: flex;
       flex-direction: column;
       gap: 20px;
-  
       width: 100%;
-  
       margin-top: 55px;
       li {
         @include navbarMenuLi;

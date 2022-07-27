@@ -1,26 +1,19 @@
 .hero__index-main {
   position: relative;
   grid-area: main;
-
   .hero__index-firstSection {
     display: flex;
     justify-content: center;
-
     p {
       margin-top: 25px;
-
       width: 80%;
-
       text-align: center;
-
       font-weight: bold;
       font-style: italic;
       font-size: 1.19rem;
-
       color: $main-color;
     }
   }
-
   .hero__index-secondSection {
     display: flex;
     justify-content: center;

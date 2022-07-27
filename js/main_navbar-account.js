@@ -1,16 +1,3 @@
-// ------------ HAMBURGER BUTTON + NAVMENU ------------ //
-const hambBtn = document.querySelector(".hambBtn");
-const navBar = document.querySelector(".navbar");
-const navBarBars = document.querySelectorAll(".hambBtn-Bar");
-
-function sliderMenu() {
-  hambBtn.classList.toggle("activeNavbar");
-  navBar.classList.toggle("activeNavbar");
-  for (element of navBarBars) {
-    element.classList.toggle("activeHambBtnBars");
-  }
-}
-
 // ------------ LOGIN SYSTEM. ------------ //
 let login__form = document.getElementById("login__form");
 login__form.addEventListener("submit", loginSystem);
@@ -58,9 +45,9 @@ closingSessionBtn.onclick = () => {
         '¡Te extrañaremos!',
         'success'
       )
-      localStorage.clear(currentUser);
-      localStorage.clear(currentPassword);
-      window.location.reload();
+      localStorage.removeItem("currentUser");
+      localStorage.removeItem("currentPassword");
+      window.location.href = '../index.html';
     }
   })
 }

@@ -19,8 +19,7 @@ function registration(e) {
     } else if(input3.value == "") {
         return false
     }
-
-    register__form.submit();
+    window.location.href = '../index.html';
 }
 
 

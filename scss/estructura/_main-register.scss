@@ -1,32 +1,28 @@
 .hero__register-main {
+  display: flex;
+  justify-content: center;
+
+  form {
+    margin-top: 50px;
     display: flex;
-    justify-content: center;
-
-    form {
-        margin-top: 50px;
-
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-
-        width: 78%;
-        
-        input {
-            @include input;
-            outline: 2px solid $main-color;
-        }
-        button {
-            @include button;
-            background-color: $main-color;
-            transition: 0.24s;
-            &:hover {
-              background-color: $fourth-color;
-            }
-            span {
-              color: $menu-main-color;
-              font-size: 1rem;
-            }
-          }
+    flex-direction: column;
+    gap: 15px;
+    width: 78%;        
+    input {
+      @include input;
+      outline: 2px solid $main-color;
     }
-        
+    button {
+      @include button;
+      background-color: $main-color;
+      transition: 0.24s;
+      &:hover {
+        background-color: $fourth-color;
+      }
+      span {
+        color: $menu-main-color;
+        font-size: 1rem;
+      }
+    }
+  }     
 }
