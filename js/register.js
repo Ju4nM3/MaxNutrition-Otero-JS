@@ -1,4 +1,4 @@
-let register__form = document.getElementById("form-newAccount");
+/* let register__form = document.getElementById("form-newAccount");
 register__form.addEventListener("click", registration);
 
 function registration(e) {
@@ -27,4 +27,4 @@ let account = {
     newUser: localStorage.getItem("newUser"),
     newPassword: localStorage.getItem("newPassword"),
     newEmail: localStorage.getItem("newEmail")
-}
+} */

@@ -1,0 +1,24 @@
+[{
+   "id": 1,
+   "user": "juan",
+   "password": "prueba",
+   "email": "prueba@prueba.com"
+},
+{
+   "id": 2,
+   "user": "juan2",
+   "password": "prueba2",
+   "email": "prueba2@prueba2.com"
+},
+{
+   "id": 3,
+   "user": "juan3",
+   "password": "prueba3",
+   "email": "prueba3@prueba3.com"
+},
+{
+   "id": 4,
+   "user": "juan4",
+   "password": "prueba4",
+   "email": "prueba4@prueba4.com"
+}]
