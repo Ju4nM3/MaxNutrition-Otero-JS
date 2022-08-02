@@ -9,7 +9,7 @@ let currentPassword = localStorage.getItem("currentPassword");
 
 let userName = document.querySelector(".navbar__postLogin-user span");
 
-fetch("users.json")
+fetch("../users.json")
 	.then((resp) => resp.json())
 	.then((data) => {
 		localStorage.setItem("accountUser-1", data[0].user);
