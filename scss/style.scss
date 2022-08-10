@@ -23,7 +23,7 @@
 body {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 120px 1fr auto;
+  grid-template-rows: 120px 1fr 180px;
   grid-template-areas:
     "header"
     "main"

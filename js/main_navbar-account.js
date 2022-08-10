@@ -15,35 +15,6 @@ function loginSystem(e) {
 	let currentPassword = localStorage.getItem("currentPassword");
 
 	if (
-		(accountUser_1 === currentUser ||
-			accountUser_2 === currentUser ||
-			accountUser_3 === currentUser ||
-			accountUser_4 === currentUser) &&
-		(accountPassword_1 === currentPassword ||
-			accountPassword_2 === currentPassword ||
-			accountPassword_3 === currentPassword ||
-			accountPassword_4 === currentPassword)
-	) {
-		login__form.submit();
-		return true;
-	} else if (
-		accountUser_1 !== currentUser ||
-		accountUser_2 !== currentUser ||
-		accountUser_3 !== currentUser ||
-		accountUser_4 !== currentUser
-	) {
-		input1.className = "error";
-		return false;
-	} else if (
-		accountPassword_1 !== currentPassword ||
-		accountPassword_2 !== currentPassword ||
-		accountPassword_3 !== currentPassword ||
-		accountPassword_4 !== currentPassword
-	) {
-		input2.className = "error";
-		return false;
-	}
-	/* if (
 		(currentUser === account.newUser || currentUser === account.newEmail) &&
 		currentPassword === account.newPassword
 	) {
@@ -55,7 +26,7 @@ function loginSystem(e) {
 	} else if (currentPassword !== account.newPassword) {
 		input2.className = "error";
 		return false;
-	} */
+	}
 }
 
 // ------------ CLOSING SESSION. ------------ //
