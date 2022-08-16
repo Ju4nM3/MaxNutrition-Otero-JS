@@ -60,7 +60,7 @@ header .header__empty {
   flex-direction: column;
   gap: 6px;
   position: absolute;
-  z-index: 10001;
+  z-index: 901;
   top: 50px;
   right: 35px;
   width: 33px;
@@ -108,7 +108,7 @@ header .header__empty {
   align-items: center;
   top: 0;
   left: 100%;
-  z-index: 1050;
+  z-index: 900;
   width: 100%;
   height: 100vh;
   background-color: #5d4399;
@@ -281,6 +281,7 @@ header .header__empty {
   width: 15px;
   color: #fff;
   margin-bottom: 10px;
+  font-size: 1.3rem;
 }
 .navbar .navbar__postLoginContainer ul li span {
   color: #fff;
@@ -294,7 +295,7 @@ header .header__empty {
 
 .navbar.activeNavbar {
   left: 0;
-  z-index: 1050;
+  z-index: 900;
 }
 
 .error {
@@ -324,12 +325,41 @@ header .header__empty {
   justify-content: center;
 }
 .hero__index-main .hero__index-secondSection .hero__index-imgContainer {
+  position: relative;
   margin-top: 50px;
   width: 90%;
   border-radius: 50px;
+  height: 80%;
+}
+.hero__index-main .hero__index-secondSection .hero__index-imgContainer i {
+  color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: calc(100px - 0.5rem);
+  z-index: 100;
+  font-size: 2rem;
+}
+.hero__index-main .hero__index-secondSection .hero__index-imgContainer i:first-child {
+  right: 10px;
+}
+.hero__index-main .hero__index-secondSection .hero__index-imgContainer i:nth-child(2) {
+  left: 10px;
+}
+.hero__index-main .hero__index-secondSection .hero__index-imgContainer i button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-color: transparent;
 }
 .hero__index-main .hero__index-secondSection .hero__index-imgContainer img {
   border-radius: 5px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .hero__register-main {
@@ -494,6 +524,70 @@ header .header__empty {
 }
 .hero__metabolism-main .hero__metabolism-message-on {
   display: flex;
+}
+
+.main__food {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+.main__food .main__food-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.main__food .main__food-form select {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  height: 25px;
+}
+.main__food .main__food-form select:hover {
+  cursor: pointer;
+}
+.main__food .main__food-form select span {
+  font-weight: bold;
+}
+.main__food .main__food-form input {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  height: 25px;
+}
+.main__food .main__food-form input:hover {
+  cursor: pointer;
+}
+.main__food .main__food-form input span {
+  font-weight: bold;
+}
+.main__food .main__food-form input::placeholder {
+  padding-left: 2px;
+}
+.main__food .main__food-form button {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  width: 60px;
+  height: 25px;
+}
+.main__food .main__food-form button:hover {
+  cursor: pointer;
+}
+.main__food .main__food-form button span {
+  font-weight: bold;
+}
+.main__food .main__food-information {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 50%;
 }
 
 /* FOOTER */

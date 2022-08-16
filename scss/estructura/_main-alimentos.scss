@@ -1,0 +1,36 @@
+.main__food {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  .main__food-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    select {
+      @include button;
+      width: 200px;
+      height: 25px;
+    }
+    input {
+      @include button;
+      width: 100px;
+      height: 25px;
+      &::placeholder {
+        padding-left: 2px;
+      }
+    }
+    button {
+      @include button;
+      width: 60px;
+      height: 25px;
+    }
+  }
+  .main__food-information {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 50%;
+  }
+}

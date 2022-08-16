@@ -94,14 +94,25 @@
       </div>
     </nav>
 
-    <!-- MAIN REGISTER-->
-    <main class="hero__register-main">
-      <form action="#" id="form-newAccount">
-        <input type="text" name="new-user" id="new-user" placeholder="Nombre de usuario" />
-        <input type="password" name="new-password" id="new-password" placeholder="Nueva contraseña" />
-        <input type="email" name="new-email" id="new-email" placeholder="Correo Electrónico" />
-        <button type="submit"><span>Registrarte</span></button>
+    <!-- MAIN -->
+    <main class="main__food">
+      <form action="" class="main__food-form" id="formFood">
+        <select name="" id="food">
+          <option value="1">Pechuga de pollo</option>
+          <option value="2">Muslo de pollo</option>
+          <option value="3">Papa</option>
+          <option value="4">Calabaza</option>
+        </select>
+        <input type="number" placeholder="Gramos" />
+        <button type="submit" id="food-btn">Buscar</button>
       </form>
+      <div class="main__food-information" id="informationFood">
+        <span class="calorias">Calorías: </span>
+        <span class="carbos">Carbohidratos: </span>
+        <span class="grasas">Grasas: </span>
+        <span class="proteinas">Proteínas: </span>
+      </div>
+      <form action="#" id="form-newAccount"></form>
     </main>
 
     <!-- FOOTER -->
@@ -129,11 +140,12 @@
 
     <!-- JS Register -->
     <script src="../js/register.js"></script>
-    <!-- JS Sweet Alert -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/main_alimentos.js"></script>
     <!-- JS Navbar On/Off -->
     <script src="../js/main_navbar.js"></script>
     <script src="../js/main_navbar-account.js"></script>
+    <!-- JS Sweet Alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- JS Main -->
     <script src="../js/main.js"></script>
   </body>

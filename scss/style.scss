@@ -2,7 +2,6 @@
 @import "utilities/tipografia";
 @import "utilities/mixins";
 
-
 * {
   font-family: $main-typography;
   li {
@@ -47,6 +46,7 @@ body {
 @import "estructura/main-index";
 @import "estructura/main-register";
 @import "estructura/main-metabolism";
+@import "estructura/main-alimentos";
 
 /* FOOTER */
 @import "estructura/footer";

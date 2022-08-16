@@ -1,35 +1,35 @@
 @mixin input {
-    width: 100%;
-    height: 35px;
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+
+  transition: focus 0.12s;
+
+  padding-left: 7.5px;
+
+  &:focus {
     border: none;
-    border-radius: 5px;
+    outline: 2px solid $border-color;
+  }
 
-    transition: focus 0.12s;
-
-    padding-left: 7.5px;
-
-    &:focus {
-      border: none;
-      outline: 2px solid $border-color;
-    }
-
-    &::placeholder {
-      font-size: 0.9rem;
-      font-weight: bold;
-    }
+  &::placeholder {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
 }
 
 @mixin button {
-    width: 100%;
-    height: 35px;
-    border: none;
-    border-radius: 5px;
-    &:hover {
-      cursor: pointer;
-    }
-    span {
-      font-weight: bold;
-    }
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  &:hover {
+    cursor: pointer;
+  }
+  span {
+    font-weight: bold;
+  }
 }
 
 @mixin navbarMenuLi {
@@ -39,6 +39,7 @@
     width: 15px;
     color: $menu-main-color;
     margin-bottom: 10px;
+    font-size: 1.3rem;
   }
   span {
     color: $menu-main-color;

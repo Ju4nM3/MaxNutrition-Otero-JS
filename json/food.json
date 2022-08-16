@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "Food": "Pechuga de Pollo",
+    "Cantidad": 100,
+    "Calorias": 160,
+    "Carbohidratos": 0,
+    "Grasa": 6,
+    "Proteinas": 24
+  },
+  {
+    "id": 2,
+    "Food": "Muslo de pollo",
+    "Cantidad": 100,
+    "Calorias": 214,
+    "Carbohidratos": 0,
+    "Grasa": 11.06,
+    "Proteinas": 26.8
+  },
+  {
+    "id": 3,
+    "Food": "Papa cocida",
+    "Cantidad": 100,
+    "Calorias": 80,
+    "Carbohidratos": 18.22,
+    "Grasa": 0.11,
+    "Proteinas": 2.16
+  },
+  {
+    "id": 4,
+    "Food": "Calabaza cocida",
+    "Cantidad": 100,
+    "Calorias": 46,
+    "Carbohidratos": 7.94,
+    "Grasa": 1.75,
+    "Proteinas": 1.08
+  }
+]

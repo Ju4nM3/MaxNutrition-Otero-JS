@@ -17,14 +17,15 @@
 
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/99c4b4ae31.js" crossorigin="anonymous"></script>
-        
   </head>
   <body>
     <!-- HEADER -->
     <header>
       <div></div>
       <div class="header__title">
-        <a href="index.html"><h1 class="header__title-h1"><span>Max</span><br />NutritioN</h1></a>
+        <a href="index.html"
+          ><h1 class="header__title-h1"><span>Max</span><br />NutritioN</h1></a
+        >
       </div>
       <div class="header__empty"></div>
     </header>
@@ -36,25 +37,30 @@
       <div class="hambBtn-Bar"></div>
     </button>
 
-    <!-- NAVBAR -->  
+    <!-- NAVBAR -->
     <nav class="navbar">
-
       <!-- Navbar Title -->
-      <div class="navbar__title"><a href="index.html"><span>Max<br /><span>NutritioN</span></span></a></div>
+      <div class="navbar__title">
+        <a href="index.html"
+          ><span>Max<br /><span>NutritioN</span></span></a
+        >
+      </div>
 
       <!-- Navbar Pre-Login -->
       <div class="navbar__loginContainer" id="login-system">
-        <form class="navbar__loginForm" id="login__form" action="#" >
+        <form class="navbar__loginForm" id="login__form" action="#">
           <input type="text" name="user" id="current-user" placeholder="Nombre de Usuario / Email" />
           <input type="password" name="password" id="current-password" placeholder="Contraseña" />
-          <button type="submit" id="login__btn"><span>Iniciar sesión</span></button>
+          <button type="submit" id="login__btn">
+            <span>Iniciar sesión</span>
+          </button>
         </form>
         <a class="navbar__recoverPassword" href="#">¿Olvidaste tu contraseña?</a>
         <a class="navbar__register-btnContainer" href="html/register.html">
           <button class="navbar__register-btn" id="register__btn">
             <span>Crear cuenta nueva</span>
           </button>
-        </a>  
+        </a>
       </div>
 
       <!-- Navbar Post-Login -->
@@ -63,7 +69,9 @@
           <div class="navbar__postLogin-user">
             <i class="fa-solid fa-circle-user fa-xl"></i>
             <span></span>
-            <button type="reset" id="closeSession__btn" class="navbar__postlogin-btn"><span>Cerrar sesión</span></button>
+            <button type="reset" id="closeSession__btn" class="navbar__postlogin-btn">
+              <span>Cerrar sesión</span>
+            </button>
           </div>
         </div>
         <ul>
@@ -72,20 +80,17 @@
               <i class="fa-solid fa-house-fire fa-lg"></i>
               <span>Inicio</span>
             </li>
-            
           </a>
           <a href="html/metabolism.html">
-            
             <li>
               <i class="fa-solid fa-calculator fa-lg"></i>
               <span>Calculadora de TMB</span>
             </li>
-            
           </a>
-          <a href="html/macro.html">
+          <a href="html/alimentos.html">
             <li>
-              <i class="fa-solid fa-prescription-bottle fa-lg"></i>
-              <span>Calculadora de macronutrientes</span>
+              <i class="fa-solid fa-apple-whole"></i>
+              <span>Consulta de alimentos</span>
             </li>
           </a>
         </ul>
@@ -98,8 +103,10 @@
         <p>Bienvenido al sistema que acompañará tu rutina</p>
       </section>
       <section class="hero__index-secondSection">
-        <div class="hero__index-imgContainer">
-          <img src="images/nutricion.jpg" alt="" />
+        <div class="hero__index-imgContainer" id="imgContainer">
+          <i class="fa-solid fa-arrow-right-long"><button id="imageContinueArrow"></button></i>
+          <i class="fa-solid fa-arrow-left-long"><button id="imageReverseArrow"></button></i>
+          <img id="img" src="images/nutricion.jpg" alt="" />
         </div>
       </section>
       <form action="#" id="form-newAccount"></form>
@@ -108,29 +115,36 @@
     <!-- FOOTER -->
     <footer>
       <div class="footer__icon-container">
-        <div class="firstIcon iconContainer"><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></div>
-        <div class="secondIcon iconContainer"><a href="https://twitter.com/home"><i class="fa-brands fa-twitter"></i></a></div>
-        <div class="thirdIcon iconContainer"><a href="https://es-la.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></div>
+        <div class="firstIcon iconContainer">
+          <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="secondIcon iconContainer">
+          <a href="https://twitter.com/home"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <div class="thirdIcon iconContainer">
+          <a href="https://es-la.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
       </div>
       <div class="footer__copyright-container">
         <span>Copyright © 2022 MaxNutrition</span>
       </div>
-      <div  class="footer__link-container">
-        <a href="terminos.html">términos y condiciones</a>
-        <a href="politicas.html">políticas de privacidad</a>
-        <a href="reporte.html">reporte de abuso</a>
+      <div class="footer__link-container">
+        <a href="html/terminos.html">términos y condiciones</a>
+        <a href="html/politicas.html">políticas de privacidad</a>
+        <a href="html/reporte.html">reporte de abuso</a>
       </div>
     </footer>
 
+    <!-- JS Carrousel -->
+    <script src="js/main_carrousel.js"></script>
     <!-- JS Register -->
     <script src="js/register.js"></script>
     <!-- JS Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- JS Navbar On/Off -->
-    <script src="js/main_navbar.js"></script> 
-    <script src="js/main_navbar-account.js"></script> 
+    <script src="js/main_navbar.js"></script>
+    <script src="js/main_navbar-account.js"></script>
     <!-- JS Main -->
     <script src="js/main.js"></script>
-    
   </body>
 </html>
