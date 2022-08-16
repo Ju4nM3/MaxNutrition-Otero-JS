@@ -34,5 +34,59 @@
     "Carbohidratos": 7.94,
     "Grasa": 1.75,
     "Proteinas": 1.08
+  },
+  {
+    "id": 5,
+    "Food": "Pan blanco",
+    "Cantidad": 100,
+    "Calorias": 266,
+    "Carbohidratos": 50.61,
+    "Grasa": 3.29,
+    "Proteinas": 7.64
+  },
+  {
+    "id": 6,
+    "Food": "Pan de salvado",
+    "Cantidad": 100,
+    "Calorias": 236,
+    "Carbohidratos": 39.8,
+    "Grasa": 4.4,
+    "Proteinas": 10.4
+  },
+  {
+    "id": 7,
+    "Food": "Queso cremoso",
+    "Cantidad": 100,
+    "Calorias": 301,
+    "Carbohidratos": 0.45,
+    "Grasa": 24.99,
+    "Proteinas": 18.6
+  },
+  {
+    "id": 8,
+    "Food": "Jamón cocido",
+    "Cantidad": 100,
+    "Calorias": 121,
+    "Carbohidratos": 1.97,
+    "Grasa": 3.98,
+    "Proteinas": 18.13
+  },
+  {
+    "id": 9,
+    "Food": "Leche descremada",
+    "Cantidad": 100,
+    "Calorias": 35,
+    "Carbohidratos": 4.85,
+    "Grasa": 0.18,
+    "Proteinas": 3.4
+  },
+  {
+    "id": 10,
+    "Food": "Arroz blanco",
+    "Cantidad": 100,
+    "Calorias": 204,
+    "Carbohidratos": 44.08,
+    "Grasa": 0.44,
+    "Proteinas": 4.2
   }
 ]
