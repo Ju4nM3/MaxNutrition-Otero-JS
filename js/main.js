@@ -1,7 +1,4 @@
-// ------------ Ejecutando Hamburger Button ------------//
 hambBtn.addEventListener("click", sliderMenu);
-
-// ------------ USER CONNECTION ------------//
 
 let { newUser, newPassword, newEmail } = account;
 let currentUser = localStorage.getItem("currentUser");
@@ -31,5 +28,4 @@ if (currentUser && currentPassword) {
 		"navbar__postLoginContainer";
 }
 
-// ------------ Ejecutando Sistema de Login ------------//
 login__form.addEventListener("submit", loginSystem);

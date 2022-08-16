@@ -1,4 +1,3 @@
-// ------------ HAMBURGER BUTTON + NAVMENU ------------ //
 const hambBtn = document.querySelector(".hambBtn");
 const navBar = document.querySelector(".navbar");
 const navBarBars = document.querySelectorAll(".hambBtn-Bar");

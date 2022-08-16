@@ -1,4 +1,3 @@
-// ------------ LOGIN SYSTEM. ------------ //
 let login__form = document.getElementById("login__form");
 login__form.addEventListener("submit", loginSystem);
 
@@ -29,7 +28,6 @@ function loginSystem(e) {
 	}
 }
 
-// ------------ CLOSING SESSION. ------------ //
 let closingSessionBtn = document.getElementById("closeSession__btn");
 closingSessionBtn.onclick = () => {
 	Swal.fire({
